@@ -21,6 +21,12 @@ jobs:
       - name: Set var
         id: setvar 
         run: ls
+      - name: Set var
+        id: setvar 
+        run: pwd
+      - name: Set var
+        id: setvar 
+        run: ls coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
