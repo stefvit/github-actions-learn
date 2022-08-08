@@ -18,9 +18,6 @@ jobs:
       - name: Run test
         id: runtest
         run: npm test
-      - name: Set var
-        id: a 
-        run: ls
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
