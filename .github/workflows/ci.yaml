@@ -8,12 +8,19 @@ jobs:
     name: run-ci
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
         with:
-          node-version: 18.4.0
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
       - run: npm ci
-      - run: npm test
+      - name: Run test
+        id: runtest
+        run: npm test
+      - name: Set var
+        id: a 
+        run: ls
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
