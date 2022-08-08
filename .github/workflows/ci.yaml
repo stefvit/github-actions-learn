@@ -19,13 +19,13 @@ jobs:
         id: runtest
         run: npm test
       - name: Set var
-        id: setvar 
+        id: a 
         run: ls
       - name: Set pwd
-        id: setvar 
+        id: b 
         run: pwd
       - name: Set cover
-        id: setvar 
+        id: c 
         run: ls coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
