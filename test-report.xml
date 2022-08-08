@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/vitorcarra/Projects/fullcycle/github-actions-learn/src/index.test.js">
+    <testCase name="add 5 + 5 to be equal 10" duration="1"/>
+    <testCase name="add 5 * 5 to be equal 25" duration="1"/>
+  </file>
+</testExecutions>
