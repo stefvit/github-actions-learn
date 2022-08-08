@@ -20,7 +20,7 @@ jobs:
         run: npm test
       - name: Set var
         id: setvar 
-        run: ls /github/workspace/./coverage/lcov.info
+        run: ls
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
