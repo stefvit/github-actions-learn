@@ -15,7 +15,14 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm test
+      - name: Run test
+        id: runtest
+        run: npm test
+      - name: Set var
+        id: setvar 
+        run: echo "::set-output name=coverage::$(cat /github/workspace/./coverage/lcov.info)"
+      - name: Get coverage
+        run: echo "${{ steps.setvar.outputs.coverage }}"
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
